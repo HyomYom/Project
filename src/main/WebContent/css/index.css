@@ -1,0 +1,70 @@
+:root {
+  /* Inline size */
+  --page-max-inline-size: 100%;
+}
+*{
+	margin: 0;
+}
+
+body{
+	width: 100%;
+}
+ul {
+    overflow: auto;
+    list-style:none;
+    padding-left: 0px;
+    margin: 5 0 5 0;
+    
+}
+ 
+li {
+    float: left;
+    margin: 5px;
+}
+
+table {
+	width : 100%;
+	border-collapse: collapse;
+	border: 0;
+	margin: 10p 0 10px 0;
+}
+th{
+	border: 1px solid white;
+	background-color: #00ab6f;
+	color: white;
+}
+td{
+	border: 1px solid grey;
+	font-weight: bolder;
+	
+}
+th, td{
+	text-align: center;
+	font-size: small;
+}
+thead {
+	height: 60px;
+}
+
+.searchForm{
+	margin: 10px 0 10px 0;
+}
+
+.pageNumList{
+	margin: auto;
+	width: 60%;
+	height: 50px;
+	text-align: center;
+	
+}
+.pageNumList>div{
+	margin: 10px 0 10px 0;
+}
+
+.pageNumList p {
+	display : inline-block;
+}
+
+a {
+	text-decoration: none;
+}
