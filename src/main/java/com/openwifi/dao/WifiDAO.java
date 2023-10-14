@@ -35,79 +35,6 @@ public class WifiDAO {
 			e.printStackTrace();
 		}
 	}
-//public void wifiInsert(List<WifiDTO> list) {
-//		
-//		
-//		try {
-//			System.out.println(list.size()+"dao");
-//			Connection conn = SqlConnection.connection();
-//			String sql = "INSERT INTO OPEN_WIFI(WIFI_ID, DISTRICT, WIFI_NAME, ADDR1, ADDR2, INST_FLO, INST_TYPE, INST_AUTHORITY, SERVICE_DIVISION, SERVICE_VARIETY, INST_YEAR, INST_LOC, WIFI_ENVIRONMENT, WIFI_X_COD, WIFI_Y_COD, INST_DATE)"
-//					+ " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (WIFI_ID) DO UPDATE SET DISTRICT = EXCLUDED.DISTRICT";
-//			PreparedStatement pstmt = conn.prepareStatement(sql);
-//			for(WifiDTO item : list) {
-//			pstmt.setString(1, item.getWifiId());
-//			pstmt.setString(2, item.getDistrict());
-//			pstmt.setString(3, item.getWifiName());
-//			pstmt.setString(4, item.getAddr1());
-//			pstmt.setString(5, item.getAddr2());
-//			pstmt.setString(6, item.getInstFlo());
-//			pstmt.setString(7, item.getInstType());
-//			pstmt.setString(8, item.getInstAuthority());
-//			pstmt.setString(9, item.getServiceDivision());
-//			pstmt.setString(10, item.getServiceVariety());
-//			pstmt.setInt(11, item.getInstYear());
-//			pstmt.setString(12, item.getInstLoc());
-//			pstmt.setString(13, item.getWifiEnvironment());
-//			pstmt.setString(14, item.getWifiXCode());
-//			pstmt.setString(15, item.getWifiYCode());
-//			pstmt.setString(16, item.getInstDate());
-//			pstmt.execute();
-//			}
-//			
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		
-//		
-//	}
-//	
-//public void wifiInsert(JsonDTO[] jsonDTOs) {
-//		
-//		try {
-//			System.out.println(jsonDTOs.length+"dao");
-//			Connection conn = SqlConnection.connection();
-//			String sql = "INSERT INTO OPEN_WIFI(WIFI_ID, DISTRICT, WIFI_NAME, ADDR1, ADDR2, INST_FLO, INST_TYPE, INST_AUTHORITY, SERVICE_DIVISION, SERVICE_VARIETY, INST_YEAR, INST_LOC, WIFI_ENVIRONMENT, WIFI_X_COD, WIFI_Y_COD, INST_DATE)"
-//					+ " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (WIFI_ID) DO UPDATE SET DISTRICT = EXCLUDED.DISTRICT";
-//			PreparedStatement pstmt = conn.prepareStatement(sql);
-//			for(JsonDTO item : jsonDTOs) {
-//			pstmt.setString(1, item.getX_SWIFI_MGR_NO().substring(3));
-//			pstmt.setString(2, item.getX_SWIFI_WRDOFC());
-//			pstmt.setString(3, item.getX_SWIFI_MAIN_NM());
-//			pstmt.setString(4, item.getX_SWIFI_ADRES1());
-//			pstmt.setString(5, item.getX_SWIFI_ADRES2());
-//			pstmt.setString(6, item.getX_SWIFI_INSTL_FLOOR());
-//			pstmt.setString(7, item.getX_SWIFI_INSTL_TY());
-//			pstmt.setString(8, item.getX_SWIFI_INSTL_MBY());
-//			pstmt.setString(9, item.getX_SWIFI_SVC_SE());
-//			pstmt.setString(10, item.getX_SWIFI_CMCWR());
-//			pstmt.setInt(11, item.getX_SWIFI_CNSTC_YEAR());
-//			pstmt.setString(12, item.getX_SWIFI_INOUT_DOOR());
-//			pstmt.setString(13, item.getX_SWIFI_REMARS3());
-//			pstmt.setString(14, item.getLAT());
-//			pstmt.setString(15, item.getLNT());
-//			pstmt.setString(16, item.getWORK_DTTM());
-//			
-//			pstmt.executeUpdate();
-//			}
-//			
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		
-//		
-//	}
 
 	public boolean wifiInsert(ArrayList<JsonObject> arrList) {
 
@@ -149,13 +76,7 @@ public class WifiDAO {
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}
-//				try {
-//					if (conn != null && !conn.isClosed()) {
-//						conn.close();
-//					}
-//				} catch (SQLException e) {
-//					e.printStackTrace();
-//				}
+
 			}
 		}
 		return true;
@@ -188,13 +109,7 @@ public class WifiDAO {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-//            try {
-//                if (conn != null && !conn.isClosed()) {
-//                    conn.close();
-//                }
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
+
 
 		}
 
@@ -295,13 +210,6 @@ public class WifiDAO {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-//            try {
-//                if (conn != null && !conn.isClosed()) {
-//                    conn.close();
-//                }
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
 
 		}
 
@@ -384,13 +292,6 @@ public class WifiDAO {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-//            try {
-//                if (conn != null && !conn.isClosed()) {
-//                    conn.close();
-//                }
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
 
 		}
 		return true;
@@ -416,13 +317,6 @@ public class WifiDAO {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-//            try {
-//                if (conn != null && !conn.isClosed()) {
-//                    conn.close();
-//                }
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
 
 		}
 
@@ -453,13 +347,6 @@ public class WifiDAO {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-//            try {
-//                if (conn != null && !conn.isClosed()) {
-//                    conn.close();
-//                }
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
 
 		}
 		return true;
@@ -511,13 +398,7 @@ public class WifiDAO {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-//            try {
-//                if (conn != null && !conn.isClosed()) {
-//                    conn.close();
-//                }
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
+
 
 		}
 
@@ -554,13 +435,7 @@ public class WifiDAO {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-//            try {
-//                if (conn != null && !conn.isClosed()) {
-//                    conn.close();
-//                }
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
+
 
 		}
 
@@ -591,13 +466,7 @@ public class WifiDAO {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-//            try {
-//                if (conn != null && !conn.isClosed()) {
-//                    conn.close();
-//                }
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
+
 
 		}
 		
@@ -642,13 +511,7 @@ public class WifiDAO {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-//            try {
-//                if (conn != null && !conn.isClosed()) {
-//                    conn.close();
-//                }
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
+
 
 		}
 		sql = "DELETE FROM BOOK_MARK_DETAIL WHERE GROUP_NAME = ?";
@@ -699,13 +562,7 @@ public class WifiDAO {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-//            try {
-//                if (conn != null && !conn.isClosed()) {
-//                    conn.close();
-//                }
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
+
 
 		}
 
@@ -743,13 +600,7 @@ public class WifiDAO {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-//            try {
-//                if (conn != null && !conn.isClosed()) {
-//                    conn.close();
-//                }
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
+
 
 		}
 		return true;

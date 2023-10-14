@@ -55,12 +55,7 @@ public class JsonWifiOkAction implements Action {
 				cnt += 1;
 			}
 		
-//		urlBuilder.append("http://openapi.seoul.go.kr:8088");
-//		urlBuilder.append("/"+ URLEncoder.encode("4b446e5a7770616737315765594c6e", "UTF-8"));
-//		urlBuilder.append("/" + URLEncoder.encode("json", "UTF-8"));
-//		urlBuilder.append("/" + URLEncoder.encode("TbPublicWifiInfo", "UTF-8"));
-//		urlBuilder.append("/" + URLEncoder.encode("1", "UTF-8"));
-//		urlBuilder.append("/" + URLEncoder.encode("10", "UTF-8")); 
+
 			Request.Builder builder = new Request.Builder().url(urlBuilder.toString()).get();
 			builder.addHeader("Content-type", "application/json");
 			Request request = builder.build();
@@ -82,16 +77,12 @@ public class JsonWifiOkAction implements Action {
 		System.out.println(arrList.size());
 		WifiDAO wifiDAO = new WifiDAO();
 		
-//		PrintWriter out = resp.getWriter();
 		if(wifiDAO.wifiInsert(arrList)) {
 			int total = wifiDAO.wifiCnt();
 			transfer = new ActionTo();
-//			out.print("<script>");
-//			out.print("location.href = '" + req.getContextPath() + "/index2.jsp?total=" + total+"';");
-//			out.print("</script>");
 			req.setAttribute("total",total);
 			transfer.setPath("/finishied.jsp");
-			transfer.setRedirect(false);
+			transfer.setRedirect(true);
 		}
 		System.out.println("완료");
 		
